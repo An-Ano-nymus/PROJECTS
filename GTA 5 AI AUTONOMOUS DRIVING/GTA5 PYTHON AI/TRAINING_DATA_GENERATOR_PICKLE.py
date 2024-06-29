@@ -1,7 +1,6 @@
-# create_training_data.py
-
+#create_training_data.py
 import numpy as np
-# from grabscreen import grab_screen        #can also use a 'from PIL import ImageGrab' to capture screen
+#from grabscreen import grab_screen        #can also use a 'from PIL import ImageGrab' to capture screen
 from PIL import ImageGrab
 import cv2
 import time
