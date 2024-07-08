@@ -13,6 +13,9 @@ GAADIV_PATH=r'D:\Raghav\EVOLUTION\GOD_DEMON is BACK\Artificial INTELLIGENCE\GTA5
 
 model=load_model(GAADIV_PATH)
 
+
+direction=['left','straight','right']
+
 def straight():
 
     PressKey(W)
@@ -70,6 +73,26 @@ def main():
                 print(prediction)
             except Exception as e:
                 print(f"Error during prediction: {e}")
+
+
+            predicted_class = np.argmax(prediction)
+            
+            turn_thresh = 0.75
+            fwd_thresh = 0.70
+
+            if prediction[1] > fwd_thresh:
+                straight()
+            elif prediction[0] > turn_thresh:
+                left()
+            elif prediction[2] > turn_thresh:
+                right()
+            else:
+                straight()
+
+            print(direction[predicted_class])
+
+
+
 
         keys = key_check()
         if 'T' in keys:
