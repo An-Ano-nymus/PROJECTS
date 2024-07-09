@@ -33,4 +33,4 @@ test_loss, test_acc = model.evaluate(TEST_X, TEST_Y, verbose=2)
 print(test_acc)
 
 
-model.save('GAANDIV_GTA5.keras')
+model.save('D:\Raghav\EVOLUTION\GOD_DEMON is BACK\Artificial INTELLIGENCE\GTA5 PYTHON AI\GAANDIV_GTA5.keras')     #accuracy currently 77%
