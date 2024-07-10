@@ -3,7 +3,9 @@ from PIL import ImageGrab
 from GAME_Control import ReleaseKey,PressKey,W,A,S,D
 import numpy as np
 import pandas as pd
-from tensorflow.keras.models import load_model
+from tensorflow import keras
+from keras.models import load_model
+from keras.layers import Dense
 import time
 from getkeys import key_check
 
@@ -14,7 +16,8 @@ GAADIV_PATH=r'D:\Raghav\EVOLUTION\GOD_DEMON is BACK\Artificial INTELLIGENCE\GTA5
 model=load_model(GAADIV_PATH)
 
 
-direction=['left','straight','right']
+direction=['left','straight','right']    #order of direction
+
 
 def straight():
 
@@ -37,7 +40,6 @@ def right():
     PressKey(D)
     ReleaseKey(A)
     ReleaseKey(D)
-
 
 
 def slow_ya_roll():
@@ -165,6 +167,8 @@ def main():
 
 
 
-
 if __name__ == "__main__":
     main()
+
+
+

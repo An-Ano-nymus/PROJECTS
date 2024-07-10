@@ -1,6 +1,7 @@
 import tensorflow as tf
 import numpy as np
-from tensorflow.keras import datasets, layers, models
+from tensorflow import keras
+from keras import datasets, layers, models
 import matplotlib.pyplot as plt
 
 
@@ -56,7 +57,7 @@ def GAANDIV(width=160, height=120, color_channel=1, learning_rate=0.002):
     model.add(layers.Dense(32, activation='relu'))
 
     # Add the final dense layer with the number of classes (3 in this case)
-    model.add(layers.Dense(3, activation='softmax'))
+    model.add(layers.Dense(3))
 
     # Print a summary of the model
     model.summary()

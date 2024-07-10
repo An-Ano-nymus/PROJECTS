@@ -1,10 +1,11 @@
 import pandas as pd
 import tensorflow as tf
 import numpy as np
-from tensorflow.keras import layers, models
+from tensorflow import keras
+from keras import layers, models
 import matplotlib.pyplot as plt
 from GAANDIV_AI_MODEL_driver import GAANDIV
-
+ 
 WIDTH = 160
 HEIGHT = 120
 Color_Channel = 1
@@ -27,7 +28,7 @@ TEST_Y = np.array([i[1] for i in test_data])
 
 model = GAANDIV(WIDTH, HEIGHT, Color_Channel)
 
-model.fit(x=X, y=Y, epochs=15, validation_data=(TEST_X, TEST_Y), batch_size=128)
+model.fit(x=X, y=Y, epochs=25, validation_data=(TEST_X, TEST_Y), batch_size=64)
 
 test_loss, test_acc = model.evaluate(TEST_X, TEST_Y, verbose=2)
 print(test_acc)
