@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="robots" content="index, all" />
+    <script src="https://www.webglearth.com/v2/api.js"></script>
+    <title>WebGL Weather Earth API</title>
+    <link rel="stylesheet" href="weather.css">
+    <meta name="description" content="Free and open-source 3D digital globe for web and mobile devices. This example shows how to zoom to a certain zoom level, get the info about the zoom level, set position to a place, use the fly-to function, and add markers & polygons.">
+
+  
+  </head>
+  <body onload="init()">
+
+
+    <div id="map"></div>
+    <div id="coords"></div>
+    <div id="buttons">
+      <input type="button" value="Zoom to level 3" onclick="setZoom(3);"><br>
+      <input type="button" value="What's current zoom level?" onclick="getZoomLevel();"><br>
+      <input type="button" value="Set position to Mount Everest" onclick="setPositionToEverest();"><br>
+      <input type="button" value="What's current position?" onclick="getCurrentCenter();"><br>
+      <input type="button" value="Fly to Japan bounds" onclick="flyToJapan()"><br>
+      <input type="button" value="Fly to Iceland" onclick="panTo([65, -19]);"><br>
+      <input type="button" value="Add some markers & polygons" id="addmarkers" onclick="addSomeMarkers()"><br>
+
+    </div>
+    <div id="layercontrol">
+      Grand Canyon opacity:<br>
+      0<input type="range" id="opacity2" min="0" max="1" step="0.01" value="0.7">1<br>
+    </div>
+
+    <div id="BAR">
+
+                
+        
+            
+        <input type="text" name="QUESTION" placeholder="ENTER CITY" id="PROMPT">
+
+        <input type="submit" value="CHECK" id="SEND_BUTTON" onclick="WEATHER_FORECAST_BOX_CREATE_FOR_CITY_NAME()">
+
+        <input type="button" value="CURRENT LOCATION" id="CURRENT_LOCATION" onclick="getCurrentWeather()"><br>
+        
+        
+    </div>
+
+
+
+
+    <script src="/GOD_DEMON_IS_BACK/WEB_DEVLOPMENT/Projects/weather 3d earth/weather.js"></script>
+  </body>
+</html>
+
