@@ -1,0 +1,226 @@
+
+
+/* ................................................................ITS A NEW VERSION OF ABOVE CODE ..................................................................... */
+
+body {
+  background-color: rgb(48, 45, 45);
+  background-size: cover;
+  color: aliceblue;
+  font-family: Arial, sans-serif; /* Default font for better readability */
+  margin: 0; /* Remove default body margin for better layout control */
+  overflow: hidden;
+}
+
+#GPT {
+  position: fixed;
+  top: 1vh;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally using translate */
+  width: 80%; /* Adjust width for responsiveness */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: calc(2rem + 1vw); /* Use viewport units for responsive font size */
+  margin: 2vh 0;
+  text-align: center;
+}
+
+#content_box {
+  position: absolute;
+  top: calc(1vh + 2vh + 20px); /* Place below #GPT with a gap */
+  left: 50%;
+  margin: 20vh auto; /* Center vertically and horizontally */
+  transform: translateX(-50%); /* Center horizontally using translate */
+  width: 80vw;
+  max-width: 1000px; /* Set a maximum width for better responsiveness */
+  max-height: 40vh;
+  padding: 20px;
+  border: 1px solid #fdfdfd; /* Optional border for visual separation */
+  background-color: rgba(0, 0, 0, 0.5); /* Add background color for better readability */
+  border-radius: 10px; /* Add border-radius for better aesthetics */
+  margin-bottom: 25px; /* Gap between content_box and query_box */
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+#content_generated {
+  white-space: pre-wrap; /* Preserve whitespace and wrap content */
+  word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+#query_box {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally using translate */
+  width: 80%; /* Adjust width for responsiveness */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; /* Center items vertically */
+  font-size: calc(0.8rem + 0.5vw); /* Use viewport units for responsive font size */
+  padding: 10px 0; /* Add padding for better spacing */
+  background-color: rgb(90, 90, 90); /* Add background color for better readability */
+  border-radius: 20px;
+  overflow: hidden;
+  overflow-y: auto;
+  border: 3px solid #ff0000; /* Optional border for visual separation */
+}
+
+#logo {
+  width: 10%; /* Adjust percentage as needed */
+  height: auto;
+  max-width: 80px; /* Set a maximum width */
+  border-radius: 10px;
+  min-width: 35px;
+  margin: 5px 10px;
+}
+
+#PROMPT {
+  color: aquamarine;
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 1rem; /* Use rem for better font size scaling */
+  margin: 3px;
+  padding: 10px; /* Add padding for better user experience */
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.568);
+  width: 60vw;
+  min-width: 300px; /* Set minimum width for better responsiveness on larger screens */
+  max-width: 80vw; /* Set maximum width to prevent overflowing on smaller screens */
+  height: 5vh;
+  min-height: 40px; /* Set minimum height for better input field visibility */
+  max-height: 80px; /* Set maximum height to prevent excessive space on smaller screens */
+  overflow-y: scroll;
+}
+
+#SEND_BUTTON {
+  font-family: 'Baloo Bhai', cursive;
+  margin: 5px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border: 2px solid grey;
+  border-radius: 10px;
+  font-size: 1rem; /* Use rem for better font size scaling */
+  cursor: pointer;
+  padding: 5px 10px; /* Add padding for better button appearance */
+  min-width: 100px; /* Set minimum width for better click target area */
+  width: auto; /* Adjust width to fit content */
+  height: auto; /* Adjust height to fit content */
+}
+
+#SEND_BUTTON:hover {
+  background-color: rgb(3, 165, 214);
+}
+
+
+
+
+
+#HISTORY_BUTTON{
+  position:fixed;
+  font-family: 'Baloo Bhai', cursive;
+  margin: 5px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border: 2px solid rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  font-size:30px;
+  cursor:pointer;
+  text-align: center;
+  text-justify: auto;
+  background-color: #000000cb;
+  border-radius: 10px;
+  padding: 5px; /* Add padding for better spacing */
+  flex-direction: row;
+  flex-grow: 0.5;
+  
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-radius: 15px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.4s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+
+
+
+@media (max-width: 1226px) {
+  #GPT {
+    font-size: calc(1.5rem + 0.5vw);
+  }
+  
+  #query_box {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center;
+    padding: 10px 10px; /* Adjust padding for better spacing */
+  }
+  
+  #logo {
+    width: 25%; /* Increase logo size on smaller screens */
+    min-width: auto;
+    max-width: 60px;
+  }
+  
+  #PROMPT {
+    
+    width: 100%; /* Make input field full width */
+    height: auto;
+    min-width: none;
+    margin: auto;
+    resize:both;
+    
+  }
+  
+  #SEND_BUTTON {
+    width: 25%; /* Adjust button width */
+    min-width: 35px;
+    position: relative;
+    left: 37%;
+    right: auto;
+  }
+}
+
+
+/* ................................................................ITS A NEW VERSION OF ABOVE CODE ..................................................................... */
+
+
+
+
+
