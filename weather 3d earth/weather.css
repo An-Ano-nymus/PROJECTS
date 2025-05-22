@@ -1,0 +1,185 @@
+html body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+#map {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+}
+
+/* #map{top: 0; right: 0; bottom: 0; left: 0; background-color: #000; position: absolute !important;} */
+
+#controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+#buttons {
+    position: absolute;
+    top:10px; 
+    left: 10px;
+}
+
+
+#layercontrol{
+    position: absolute; 
+    top:10px; 
+    right: 10px;
+}
+
+
+
+.control-button {
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.control-button:hover {
+    background-color: #1e90ff;
+}
+
+#BAR {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(68, 68, 68);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+#PROMPT {
+
+    color: #1e90ff;
+
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(2, 1, 1, 0.5);
+    color: #fff;
+    width: 250px;
+}
+
+#SEND_BUTTON  {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#SEND_BUTTON:hover {
+    background-color: #1e90ff;
+}
+
+
+#CURRENT_LOCATION{
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#CURRENT_LOCATION:hover {
+    background-color: #1e90ff;
+}
+
+
+#coords {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+    z-index: 1000;
+}
+
+
+
+
+.weather-forecast-box {
+    position: fixed;
+    top: 50%;
+    right: 20px; /* Adjust distance from right edge as needed */
+    transform: translateY(-50%);
+    background-color: rgb(78, 77, 77);
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    z-index: 1001;
+    overflow-y: auto;
+  
+    /* Animation */
+    animation: popInRight 0.5s ease-in-out;
+  }
+  
+  @keyframes popInRight {
+    from {
+      transform: translateX(100%) translateY(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0) translateY(-50%);
+      opacity: 1;
+    }
+  }
+
+
+
+  
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff8800;
+    border: none;
+    cursor: pointer;
+    border-radius: 10%;
+  }
+
+  .close-button:hover {
+    background-color:#fff;
+  }
+  
+  .weather-content {
+    margin-top: 30px; /* Adjust margin as needed */
+  }
+
+
+
